@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="employee" class="com.application.model.Employee">
+        <property name="employeeArray">
+            <array>
+            <ref bean="students"/>
+                <ref bean="students2"/>
+                <ref bean="students3"/>
+                <ref bean="students4"/>
+            </array>
+        </property>
+        <property name="studentList">
+            <list>
+                <ref bean="students"/>
+                <ref bean="students2"/>
+                <ref bean="students3"/>
+                <ref bean="students4"/>
+            </list>
+        </property>
+        <property name="studentsSet">
+            <set>
+                <ref bean="students"/>
+                <ref bean="students2"/>
+                <ref bean="students3"/>
+                <ref bean="students"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="students" class="com.application.model.Student">
+        <property name="studentId" value="101"/>
+        <property name="studentName" value="aayushkc"/>
+        <property name="rollno" value="102"/>
+        <property name="studentAddress" value="gaushala"/>
+    </bean>
+
+    <bean id="students2" class="com.application.model.Student">
+        <property name="studentId" value="102"/>
+        <property name="studentName" value="avishek paudel"/>
+        <property name="rollno" value="103"/>
+        <property name="studentAddress" value="naxal"/>
+    </bean>
+
+    <bean id="students3" class="com.application.model.Student">
+        <property name="studentId" value="101"/>
+        <property name="studentName" value="avas khadka"/>
+        <property name="rollno" value="104"/>
+        <property name="studentAddress" value="baktapur"/>
+    </bean>
+    <bean id="students4" class="com.application.model.Student">
+        <property name="studentId" value="108"/>
+        <property name="studentName" value="aayush shestha"/>
+        <property name="rollno" value="102"/>
+        <property name="studentAddress" value="lalitpur"/>
+    </bean>
+</beans>
